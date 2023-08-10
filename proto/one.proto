@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package example.simple;
+
+option go_package = "github.com/rameshrepo/proto-go-proj/proto";
+
+message MessageOne {
+    string name = 1;
+}

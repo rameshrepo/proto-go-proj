@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package example.anotherpkg;
+
+import "one.proto";  // Import message from another proto file
+
+option go_package = "github.com/rameshrepo/proto-go-proj/proto";
+
+message MessageTwo {
+    string name = 1;
+    example.simple.MessageOne one = 2;  // The package name is mandatory as MessageOne is in a different package
+}
