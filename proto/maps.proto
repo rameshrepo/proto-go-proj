@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package example.maps;
+
+option go_package = "github.com/rameshrepo/proto-go-proj/proto";
+
+message IdWrapper {
+  uint32 id = 1;
+}
+
+message MapObjExample {
+  map<string, IdWrapper> ids = 1;
+}
+
+message MapExample {
+	map<string, uint32> citypostcodes = 1;
+}

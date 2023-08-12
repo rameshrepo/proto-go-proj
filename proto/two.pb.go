@@ -25,8 +25,9 @@ type MessageTwo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Name string      `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	One  *MessageOne `protobuf:"bytes,2,opt,name=one,proto3" json:"one,omitempty"` // The package name is mandatory as MessageOne is in a different package
+	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	// The package name is mandatory as MessageOne is in a different package compared to MessageTwo
+	One *MessageOne `protobuf:"bytes,2,opt,name=one,proto3" json:"one,omitempty"`
 }
 
 func (x *MessageTwo) Reset() {
