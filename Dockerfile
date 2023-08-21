@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 ENV GO_VERSION=1.20.6
 
-RUN apt-get update && apt-get install -y wget git gcc curl protobuf-compiler
+RUN apt-get update && apt-get install -y wget git gcc curl protobuf-compiler make
 RUN wget -P /tmp "https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz"
 
 RUN tar -C /usr/local -xzf "/tmp/go${GO_VERSION}.linux-amd64.tar.gz"

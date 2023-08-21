@@ -45,7 +45,6 @@ func doMapExample() *pb.MapExample {
 		},
 	}
 	return message
-
 }
 
 func main() {
