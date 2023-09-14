@@ -5,7 +5,7 @@ ifeq ($(OS), Windows_NT)
 	SHELL := powershell.exe
 	.SHELLFLAGS := -NoProfile -Command
 	PACKAGE = $(shell Get-Content go.mod -head 1 | Foreach-Object { $$data = $$_ -split " "; "{0}" -f $$data[1]})
-	BIN = proto-go-course.exe
+	BIN = proto-go-proj.exe
 else
 	UNAME := $(shell uname -s)
 	ifeq ($(UNAME),Darwin)
@@ -19,7 +19,7 @@ else
 	BIN = proto-go-course
 endif
 
-build: 	generate
+build: generate
 	go build -o ${BIN} .
 
 generate:
